@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"NYP","children":[{"content":"School of Engineering","children":[{"content":"Diploma in DIME","children":[{"content":"Software","children":[],"payload":{"tag":"h4","lines":"6,7"}},{"content":"Cloud","children":[],"payload":{"tag":"h4","lines":"8,9"}},{"content":"MT","children":[],"payload":{"tag":"h4","lines":"10,11"}}],"payload":{"tag":"h3","lines":"4,5"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"School of IT","children":[],"payload":{"tag":"h2","lines":"12,13"}},{"content":"School of Business","children":[{"content":"Diploma in Something","children":[],"payload":{"tag":"h3","lines":"16,17"}},{"content":"Diplome in Something 2","children":[],"payload":{"tag":"h3","lines":"18,19"}}],"payload":{"tag":"h2","lines":"14,15"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>
